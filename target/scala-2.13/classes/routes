@@ -5,5 +5,8 @@ GET     /                           controllers.HomeController.index
 POST    /start                      controllers.HomeController.startDebugger
 GET     /step                       controllers.HomeController.stepDebugger
 
+# Ollama
+POST    /ask                        controllers.HomeController.ask
+
 # Static assets
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

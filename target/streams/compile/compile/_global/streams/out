@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/shawnmeier/source/visualPython/app/controllers/HomeController.scala:8:22: object ws is not a member of package play.api.libs[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.ws._[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/shawnmeier/source/visualPython/app/controllers/HomeController.scala:15:7: not found: type WSClient[0m
+[0m[[0m[31merror[0m] [0m[0m  ws: WSClient[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

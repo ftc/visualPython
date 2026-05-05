@@ -7,3 +7,6 @@ Endpoints:
 	- takes python script
 * next instruction
 	- returns current memory and line number
+
+
+Tested with qwen2.5-coder:14b

@@ -1,5 +1,5 @@
 @()
-@main("VisualPython") {
+@main("AI Debugger") {
 <div class="debugger">
     <div class="panel code-panel">
         <label for="code-input">Python Program</label>
@@ -18,6 +18,16 @@
     </div>
 </div>
 
+<div class="panel ask-panel">
+    <label for="ask-input">Ask Ollama</label>
+    <div class="ask-row">
+        <input id="ask-input" type="text" placeholder="e.g. Why is x equal to 3 here?" />
+        <input id="model-input" type="text" placeholder="Model (llama3.2)" style="width:140px" />
+        <button id="btn-ask" class="btn">Ask</button>
+    </div>
+    <pre id="ask-response" class="memory-display ask-response">—</pre>
+</div>
+
 <script>
 (function () {
     const codeInput   = document.getElementById('code-input');
@@ -27,6 +37,12 @@
     const lineNum     = document.getElementById('line-number');
     const lineInd     = document.getElementById('line-indicator');
     const memDisplay  = document.getElementById('memory-display');
+    const askInput    = document.getElementById('ask-input');
+    const modelInput  = document.getElementById('model-input');
+    const btnAsk      = document.getElementById('btn-ask');
+    const askResponse = document.getElementById('ask-response');
+
+    let currentState  = null;
 
     function setStatus(msg, isError) {
         statusEl.textContent = msg;
@@ -34,6 +50,7 @@
     }
 
     function renderState(data) {
+        currentState = data;
         if (data.done) {
             lineInd.classList.add('hidden');
             lineNum.textContent = '—';
@@ -71,6 +88,7 @@
         setStatus('Starting…', false);
         memDisplay.textContent = '—';
         lineInd.classList.add('hidden');
+        currentState = null;
 
         try {
             const data = await fetchJSON('/start', {
@@ -95,6 +113,37 @@
             renderState(data);
         } catch (e) {
             setStatus('Error: ' + e.message, true);
+        }
+    });
+
+    btnAsk.addEventListener('click', async function () {
+        const query = askInput.value.trim();
+        if (!query) return;
+
+        btnAsk.disabled = true;
+        askResponse.textContent = 'Thinking…';
+
+        const body = {
+            query,
+            code: codeInput.value,
+            model: modelInput.value.trim() || 'llama3.2'
+        };
+        if (currentState && !currentState.done) {
+            body.lineNumber = currentState.lineNumber;
+            body.locals     = currentState.locals;
+        }
+
+        try {
+            const data = await fetchJSON('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            });
+            askResponse.textContent = data.response;
+        } catch (e) {
+            askResponse.textContent = 'Error: ' + e.message;
+        } finally {
+            btnAsk.disabled = false;
         }
     });
 })();

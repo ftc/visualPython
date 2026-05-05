@@ -47,9 +47,19 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:9
+    def ask: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.ask",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "ask"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:9
+  // @LINE:12
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -57,7 +67,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:9
+    // @LINE:12
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

@@ -34,14 +34,14 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
 <body>
     <header>
         <nav>
-            <a href=""""),_display_(/*13.23*/routes/*13.29*/.HomeController.index),format.raw/*13.50*/("""" class="brand">VisualPython</a>
+            <a href=""""),_display_(/*13.23*/routes/*13.29*/.HomeController.index),format.raw/*13.50*/("""" class="brand">AI Debugger</a>
         </nav>
     </header>
     <main>
         """),_display_(/*17.10*/content),format.raw/*17.17*/("""
     """),format.raw/*18.5*/("""</main>
     <footer>
-        <p>VisualPython &mdash; Built with Scala Play</p>
+        <p>AI Debugger &mdash; Built with Scala Play</p>
     </footer>
 </body>
 </html>
@@ -62,8 +62,8 @@ Seq[Any](format.raw/*2.1*/("""<!DOCTYPE html>
               /*
                   -- GENERATED --
                   SOURCE: app/views/main.scala.html
-                  HASH: 72a8dedd802380e782e36fc320403e5f8d6b09a2
-                  MATRIX: 733->1|857->32|1037->186|1062->191|1131->234|1145->240|1206->281|1300->348|1315->354|1357->375|1466->457|1494->464|1526->469
+                  HASH: d8111f38b4e69c09240d52c789230684aa5755f6
+                  MATRIX: 733->1|857->32|1037->186|1062->191|1131->234|1145->240|1206->281|1300->348|1315->354|1357->375|1465->456|1493->463|1525->468
                   LINES: 21->1|26->2|31->7|31->7|32->8|32->8|32->8|37->13|37->13|37->13|41->17|41->17|42->18
                   -- GENERATED --
               */
