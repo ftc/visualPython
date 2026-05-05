@@ -1,0 +1,18 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(com.example.CalculatorSpec, org.scalatest.tools.Framework$$anon$1@59ee0403, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCalculatorSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCalculator.add[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the sum of two integers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCalculator.subtract[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the difference of two integers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCalculator.multiply[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the product of two integers[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mCalculator.divide[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return Right with the quotient for nonzero divisor[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return Left for division by zero[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 111 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 5[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 5, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	com.example.CalculatorSpec[0m
