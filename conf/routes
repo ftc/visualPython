@@ -1,5 +1,9 @@
 # Home
-GET     /                   controllers.HomeController.index
+GET     /                           controllers.HomeController.index
+
+# Debugger
+POST    /start                      controllers.HomeController.startDebugger
+GET     /step                       controllers.HomeController.stepDebugger
 
 # Static assets
-GET     /assets/*file       controllers.Assets.versioned(path="/public", file: Asset)
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

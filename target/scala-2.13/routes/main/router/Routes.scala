@@ -14,7 +14,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:2
   HomeController_0: controllers.HomeController,
-  // @LINE:5
+  // @LINE:9
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -23,7 +23,7 @@ class Routes(
   def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:2
     HomeController_0: controllers.HomeController,
-    // @LINE:5
+    // @LINE:9
     Assets_1: controllers.Assets
   ) = this(errorHandler, HomeController_0, Assets_1, "/")
 
@@ -39,6 +39,8 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.HomeController.index"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """start""", """controllers.HomeController.startDebugger"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """step""", """controllers.HomeController.stepDebugger"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
   ).foldLeft(Seq.empty[(String, String, String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -66,10 +68,46 @@ class Routes(
   )
 
   // @LINE:5
-  private lazy val controllers_Assets_versioned1_route = Route("GET",
+  private lazy val controllers_HomeController_startDebugger1_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("start")))
+  )
+  private lazy val controllers_HomeController_startDebugger1_invoker = createInvoker(
+    HomeController_0.startDebugger,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "startDebugger",
+      Nil,
+      "POST",
+      this.prefix + """start""",
+      """ Debugger""",
+      Seq()
+    )
+  )
+
+  // @LINE:6
+  private lazy val controllers_HomeController_stepDebugger2_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("step")))
+  )
+  private lazy val controllers_HomeController_stepDebugger2_invoker = createInvoker(
+    HomeController_0.stepDebugger,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "stepDebugger",
+      Nil,
+      "GET",
+      this.prefix + """step""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:9
+  private lazy val controllers_Assets_versioned3_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""", encodeable=false)))
   )
-  private lazy val controllers_Assets_versioned1_invoker = createInvoker(
+  private lazy val controllers_Assets_versioned3_invoker = createInvoker(
     Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -93,9 +131,21 @@ class Routes(
       }
   
     // @LINE:5
-    case controllers_Assets_versioned1_route(params@_) =>
+    case controllers_HomeController_startDebugger1_route(params@_) =>
+      call { 
+        controllers_HomeController_startDebugger1_invoker.call(HomeController_0.startDebugger)
+      }
+  
+    // @LINE:6
+    case controllers_HomeController_stepDebugger2_route(params@_) =>
+      call { 
+        controllers_HomeController_stepDebugger2_invoker.call(HomeController_0.stepDebugger)
+      }
+  
+    // @LINE:9
+    case controllers_Assets_versioned3_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned1_invoker.call(Assets_1.versioned(path, file))
+        controllers_Assets_versioned3_invoker.call(Assets_1.versioned(path, file))
       }
   }
 }
