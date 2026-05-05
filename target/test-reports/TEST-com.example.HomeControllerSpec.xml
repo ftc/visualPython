@@ -1,0 +1,457 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="shawns-MacBook-Pro.local" name="com.example.HomeControllerSpec" tests="3" errors="0" failures="3" skipped="0" time="0.339" timestamp="2026-05-05T16:32:07">
+          <properties>
+      <property name="java.specification.version" value="21"/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/><property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@21/21.0.9/libexec/openjdk.jdk/Contents/Home/lib"/><property name="sun.java.command" value="/opt/homebrew/Cellar/sbt/1.11.7/libexec/bin/sbt-launch.jar test"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2025-10-21"/><property name="java.home" value="/opt/homebrew/Cellar/openjdk@21/21.0.9/libexec/openjdk.jdk/Contents/Home"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="Zero based"/><property name="line.separator" value="
+"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="21.0.9"/><property name="user.name" value="shawnmeier"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="java.vendor.version" value="Homebrew"/><property name="java.io.tmpdir" value="/var/folders/3f/fyrksztj6yxgbpxv1167_vrh0000gn/T/"/><property name="java.version" value="21.0.9"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="native.encoding" value="UTF-8"/><property name="java.library.path" value="/Users/shawnmeier/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/><property name="stderr.encoding" value="UTF-8"/><property name="java.vendor" value="Homebrew"/><property name="scala.ext.dirs" value="/Users/shawnmeier/.sbt/1.0/java9-rt-ext-homebrew_21_0_9"/><property name="sun.io.unicode.encoding" value="UnicodeBig"/><property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="java.class.path" value="/opt/homebrew/Cellar/sbt/1.11.7/libexec/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Homebrew"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="America/Denver"/><property name="java.vm.specification.version" value="21"/><property name="os.name" value="Mac OS X"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/Users/shawnmeier"/><property name="user.language" value="en"/><property name="sbt.script" value="/opt/homebrew/Cellar/sbt/1.11.7/libexec/bin/sbt"/><property name="sbt.ipcsocket.tmpdir" value="/var/folders/3f/fyrksztj6yxgbpxv1167_vrh0000gn/T/.sbt3192d8c9/ipcsocket"/><property name="swoval.tmpdir" value="/var/folders/3f/fyrksztj6yxgbpxv1167_vrh0000gn/T/.sbt3192d8c9/swoval"/><property name="apple.awt.application.name" value="Boot"/><property name="jline.esc.timeout" value="0"/><property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/><property name="stdout.encoding" value="UTF-8"/><property name="path.separator" value=":"/><property name="os.version" value="26.3.1"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/><property name="user.dir" value="/Users/shawnmeier/source/visualPython"/><property name="os.arch" value="aarch64"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="21.0.9"/><property name="java.class.version" value="65.0"/>
+    </properties>
+          <testcase classname="com.example.HomeControllerSpec" name="HomeController GET / should return 200 OK" time="0.297">
+                      <failure message="com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/MissingImplementation]: No implementation for Materializer was bound.
+
+Requested by:
+1  : AhcWSClientProvider.&lt;init&gt;(AhcWSModule.scala:221)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:40):
+Binding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+2  : StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.scala:232)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:39):
+Binding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+3  : AhcWSModule$AhcWSClientProvider.&lt;init&gt;(AhcWSModule.java:42)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+4  : AhcWSModule$StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.java:58)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+
+Learn more:
+  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION
+
+1 error
+
+======================
+Full classname legend:
+======================
+AhcWSClientProvider:                    &quot;play.api.libs.ws.ahc.AhcWSClientProvider&quot;
+AhcWSModule:                            &quot;play.api.libs.ws.ahc.AhcWSModule&quot;
+AhcWSModule$AhcWSClientProvider:        &quot;play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider&quot;
+AhcWSModule$StandaloneWSClientProvider: &quot;play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider&quot;
+BindingKey:                             &quot;play.inject.BindingKey&quot;
+GuiceableModuleConversions$$anon$4:     &quot;play.api.inject.guice.GuiceableModuleConversions$$anon$4&quot;
+Materializer:                           &quot;org.apache.pekko.stream.Materializer&quot;
+Modules$OverrideModule:                 &quot;com.google.inject.util.Modules$OverrideModule&quot;
+StandaloneWSClientProvider:             &quot;play.api.libs.ws.ahc.StandaloneWSClientProvider&quot;
+api.libs.ws.StandaloneWSClient:         &quot;play.api.libs.ws.StandaloneWSClient&quot;
+api.libs.ws.WSClient:                   &quot;play.api.libs.ws.WSClient&quot;
+========================
+End of classname legend:
+========================
+" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/MissingImplementation]: No implementation for Materializer was bound.
+
+Requested by:
+1  : AhcWSClientProvider.&lt;init&gt;(AhcWSModule.scala:221)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:40):
+Binding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+2  : StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.scala:232)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:39):
+Binding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+3  : AhcWSModule$AhcWSClientProvider.&lt;init&gt;(AhcWSModule.java:42)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+4  : AhcWSModule$StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.java:58)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+
+Learn more:
+  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION
+
+1 error
+
+======================
+Full classname legend:
+======================
+AhcWSClientProvider:                    &quot;play.api.libs.ws.ahc.AhcWSClientProvider&quot;
+AhcWSModule:                            &quot;play.api.libs.ws.ahc.AhcWSModule&quot;
+AhcWSModule$AhcWSClientProvider:        &quot;play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider&quot;
+AhcWSModule$StandaloneWSClientProvider: &quot;play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider&quot;
+BindingKey:                             &quot;play.inject.BindingKey&quot;
+GuiceableModuleConversions$$anon$4:     &quot;play.api.inject.guice.GuiceableModuleConversions$$anon$4&quot;
+Materializer:                           &quot;org.apache.pekko.stream.Materializer&quot;
+Modules$OverrideModule:                 &quot;com.google.inject.util.Modules$OverrideModule&quot;
+StandaloneWSClientProvider:             &quot;play.api.libs.ws.ahc.StandaloneWSClientProvider&quot;
+api.libs.ws.StandaloneWSClient:         &quot;play.api.libs.ws.StandaloneWSClient&quot;
+api.libs.ws.WSClient:                   &quot;play.api.libs.ws.WSClient&quot;
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:163)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:78)
+	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:200)
+	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:176)
+	at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication(GuiceFakeApplicationFactory.scala:32)
+	at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication$(GuiceFakeApplicationFactory.scala:32)
+	at com.example.HomeControllerSpec.fakeApplication(HomeControllerSpec.scala:8)
+	at org.scalatestplus.play.BaseOneAppPerTest.newAppForTest(BaseOneAppPerTest.scala:70)
+	at org.scalatestplus.play.BaseOneAppPerTest.newAppForTest$(BaseOneAppPerTest.scala:70)
+	at com.example.HomeControllerSpec.newAppForTest(HomeControllerSpec.scala:8)
+	at org.scalatestplus.play.BaseOneAppPerTest.withFixture(BaseOneAppPerTest.scala:88)
+	at org.scalatestplus.play.BaseOneAppPerTest.withFixture$(BaseOneAppPerTest.scala:87)
+	at com.example.HomeControllerSpec.withFixture(HomeControllerSpec.scala:8)
+	at org.scalatest.wordspec.AnyWordSpecLike.invokeWithFixture$1(AnyWordSpecLike.scala:1238)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$runTest$1(AnyWordSpecLike.scala:1250)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTest(AnyWordSpecLike.scala:1250)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTest$(AnyWordSpecLike.scala:1232)
+	at org.scalatest.wordspec.AnyWordSpec.runTest(AnyWordSpec.scala:1880)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$runTests$1(AnyWordSpecLike.scala:1309)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:413)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:401)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:390)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:427)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:401)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTests(AnyWordSpecLike.scala:1309)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTests$(AnyWordSpecLike.scala:1308)
+	at org.scalatest.wordspec.AnyWordSpec.runTests(AnyWordSpec.scala:1880)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:1096)
+	at org.scalatest.wordspec.AnyWordSpec.org$scalatest$wordspec$AnyWordSpecLike$$super$run(AnyWordSpec.scala:1880)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$run$1(AnyWordSpecLike.scala:1354)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.wordspec.AnyWordSpecLike.run(AnyWordSpecLike.scala:1354)
+	at org.scalatest.wordspec.AnyWordSpecLike.run$(AnyWordSpecLike.scala:1352)
+	at org.scalatest.wordspec.AnyWordSpec.run(AnyWordSpec.scala:1880)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:414)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</failure>
+                    </testcase><testcase classname="com.example.HomeControllerSpec" name="HomeController GET / should return HTML content type" time="0.023">
+                      <failure message="com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/MissingImplementation]: No implementation for Materializer was bound.
+
+Requested by:
+1  : AhcWSClientProvider.&lt;init&gt;(AhcWSModule.scala:221)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:40):
+Binding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+2  : StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.scala:232)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:39):
+Binding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+3  : AhcWSModule$AhcWSClientProvider.&lt;init&gt;(AhcWSModule.java:42)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+4  : AhcWSModule$StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.java:58)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+
+Learn more:
+  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION
+
+1 error
+
+======================
+Full classname legend:
+======================
+AhcWSClientProvider:                    &quot;play.api.libs.ws.ahc.AhcWSClientProvider&quot;
+AhcWSModule:                            &quot;play.api.libs.ws.ahc.AhcWSModule&quot;
+AhcWSModule$AhcWSClientProvider:        &quot;play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider&quot;
+AhcWSModule$StandaloneWSClientProvider: &quot;play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider&quot;
+BindingKey:                             &quot;play.inject.BindingKey&quot;
+GuiceableModuleConversions$$anon$4:     &quot;play.api.inject.guice.GuiceableModuleConversions$$anon$4&quot;
+Materializer:                           &quot;org.apache.pekko.stream.Materializer&quot;
+Modules$OverrideModule:                 &quot;com.google.inject.util.Modules$OverrideModule&quot;
+StandaloneWSClientProvider:             &quot;play.api.libs.ws.ahc.StandaloneWSClientProvider&quot;
+api.libs.ws.StandaloneWSClient:         &quot;play.api.libs.ws.StandaloneWSClient&quot;
+api.libs.ws.WSClient:                   &quot;play.api.libs.ws.WSClient&quot;
+========================
+End of classname legend:
+========================
+" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/MissingImplementation]: No implementation for Materializer was bound.
+
+Requested by:
+1  : AhcWSClientProvider.&lt;init&gt;(AhcWSModule.scala:221)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:40):
+Binding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+2  : StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.scala:232)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:39):
+Binding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+3  : AhcWSModule$AhcWSClientProvider.&lt;init&gt;(AhcWSModule.java:42)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+4  : AhcWSModule$StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.java:58)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+
+Learn more:
+  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION
+
+1 error
+
+======================
+Full classname legend:
+======================
+AhcWSClientProvider:                    &quot;play.api.libs.ws.ahc.AhcWSClientProvider&quot;
+AhcWSModule:                            &quot;play.api.libs.ws.ahc.AhcWSModule&quot;
+AhcWSModule$AhcWSClientProvider:        &quot;play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider&quot;
+AhcWSModule$StandaloneWSClientProvider: &quot;play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider&quot;
+BindingKey:                             &quot;play.inject.BindingKey&quot;
+GuiceableModuleConversions$$anon$4:     &quot;play.api.inject.guice.GuiceableModuleConversions$$anon$4&quot;
+Materializer:                           &quot;org.apache.pekko.stream.Materializer&quot;
+Modules$OverrideModule:                 &quot;com.google.inject.util.Modules$OverrideModule&quot;
+StandaloneWSClientProvider:             &quot;play.api.libs.ws.ahc.StandaloneWSClientProvider&quot;
+api.libs.ws.StandaloneWSClient:         &quot;play.api.libs.ws.StandaloneWSClient&quot;
+api.libs.ws.WSClient:                   &quot;play.api.libs.ws.WSClient&quot;
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:163)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:78)
+	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:200)
+	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:176)
+	at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication(GuiceFakeApplicationFactory.scala:32)
+	at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication$(GuiceFakeApplicationFactory.scala:32)
+	at com.example.HomeControllerSpec.fakeApplication(HomeControllerSpec.scala:8)
+	at org.scalatestplus.play.BaseOneAppPerTest.newAppForTest(BaseOneAppPerTest.scala:70)
+	at org.scalatestplus.play.BaseOneAppPerTest.newAppForTest$(BaseOneAppPerTest.scala:70)
+	at com.example.HomeControllerSpec.newAppForTest(HomeControllerSpec.scala:8)
+	at org.scalatestplus.play.BaseOneAppPerTest.withFixture(BaseOneAppPerTest.scala:88)
+	at org.scalatestplus.play.BaseOneAppPerTest.withFixture$(BaseOneAppPerTest.scala:87)
+	at com.example.HomeControllerSpec.withFixture(HomeControllerSpec.scala:8)
+	at org.scalatest.wordspec.AnyWordSpecLike.invokeWithFixture$1(AnyWordSpecLike.scala:1238)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$runTest$1(AnyWordSpecLike.scala:1250)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTest(AnyWordSpecLike.scala:1250)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTest$(AnyWordSpecLike.scala:1232)
+	at org.scalatest.wordspec.AnyWordSpec.runTest(AnyWordSpec.scala:1880)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$runTests$1(AnyWordSpecLike.scala:1309)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:413)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:401)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:390)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:427)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:401)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTests(AnyWordSpecLike.scala:1309)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTests$(AnyWordSpecLike.scala:1308)
+	at org.scalatest.wordspec.AnyWordSpec.runTests(AnyWordSpec.scala:1880)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:1096)
+	at org.scalatest.wordspec.AnyWordSpec.org$scalatest$wordspec$AnyWordSpecLike$$super$run(AnyWordSpec.scala:1880)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$run$1(AnyWordSpecLike.scala:1354)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.wordspec.AnyWordSpecLike.run(AnyWordSpecLike.scala:1354)
+	at org.scalatest.wordspec.AnyWordSpecLike.run$(AnyWordSpecLike.scala:1352)
+	at org.scalatest.wordspec.AnyWordSpec.run(AnyWordSpec.scala:1880)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:414)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</failure>
+                    </testcase><testcase classname="com.example.HomeControllerSpec" name="HomeController GET / should contain the app name in the body" time="0.019">
+                      <failure message="com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/MissingImplementation]: No implementation for Materializer was bound.
+
+Requested by:
+1  : AhcWSClientProvider.&lt;init&gt;(AhcWSModule.scala:221)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:40):
+Binding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+2  : StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.scala:232)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:39):
+Binding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+3  : AhcWSModule$AhcWSClientProvider.&lt;init&gt;(AhcWSModule.java:42)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+4  : AhcWSModule$StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.java:58)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+
+Learn more:
+  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION
+
+1 error
+
+======================
+Full classname legend:
+======================
+AhcWSClientProvider:                    &quot;play.api.libs.ws.ahc.AhcWSClientProvider&quot;
+AhcWSModule:                            &quot;play.api.libs.ws.ahc.AhcWSModule&quot;
+AhcWSModule$AhcWSClientProvider:        &quot;play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider&quot;
+AhcWSModule$StandaloneWSClientProvider: &quot;play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider&quot;
+BindingKey:                             &quot;play.inject.BindingKey&quot;
+GuiceableModuleConversions$$anon$4:     &quot;play.api.inject.guice.GuiceableModuleConversions$$anon$4&quot;
+Materializer:                           &quot;org.apache.pekko.stream.Materializer&quot;
+Modules$OverrideModule:                 &quot;com.google.inject.util.Modules$OverrideModule&quot;
+StandaloneWSClientProvider:             &quot;play.api.libs.ws.ahc.StandaloneWSClientProvider&quot;
+api.libs.ws.StandaloneWSClient:         &quot;play.api.libs.ws.StandaloneWSClient&quot;
+api.libs.ws.WSClient:                   &quot;play.api.libs.ws.WSClient&quot;
+========================
+End of classname legend:
+========================
+" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: com.google.inject.CreationException: Unable to create injector, see the following errors:
+
+1) [Guice/MissingImplementation]: No implementation for Materializer was bound.
+
+Requested by:
+1  : AhcWSClientProvider.&lt;init&gt;(AhcWSModule.scala:221)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:40):
+Binding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+2  : StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.scala:232)
+      \_ for 2nd parameter materializer
+     at AhcWSModule.&lt;init&gt;(AhcWSModule.scala:39):
+Binding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+3  : AhcWSModule$AhcWSClientProvider.&lt;init&gt;(AhcWSModule.java:42)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+4  : AhcWSModule$StandaloneWSClientProvider.&lt;init&gt;(AhcWSModule.java:58)
+      \_ for 2nd parameter
+     at BindingKey.toProvider(BindingKey.java:155):
+Binding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))
+      \_ installed by: Modules$OverrideModule -&gt; GuiceableModuleConversions$$anon$4
+
+Learn more:
+  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION
+
+1 error
+
+======================
+Full classname legend:
+======================
+AhcWSClientProvider:                    &quot;play.api.libs.ws.ahc.AhcWSClientProvider&quot;
+AhcWSModule:                            &quot;play.api.libs.ws.ahc.AhcWSModule&quot;
+AhcWSModule$AhcWSClientProvider:        &quot;play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider&quot;
+AhcWSModule$StandaloneWSClientProvider: &quot;play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider&quot;
+BindingKey:                             &quot;play.inject.BindingKey&quot;
+GuiceableModuleConversions$$anon$4:     &quot;play.api.inject.guice.GuiceableModuleConversions$$anon$4&quot;
+Materializer:                           &quot;org.apache.pekko.stream.Materializer&quot;
+Modules$OverrideModule:                 &quot;com.google.inject.util.Modules$OverrideModule&quot;
+StandaloneWSClientProvider:             &quot;play.api.libs.ws.ahc.StandaloneWSClientProvider&quot;
+api.libs.ws.StandaloneWSClient:         &quot;play.api.libs.ws.StandaloneWSClient&quot;
+api.libs.ws.WSClient:                   &quot;play.api.libs.ws.WSClient&quot;
+========================
+End of classname legend:
+========================
+
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)
+	at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:163)
+	at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)
+	at com.google.inject.Guice.createInjector(Guice.java:87)
+	at com.google.inject.Guice.createInjector(Guice.java:78)
+	at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:200)
+	at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:176)
+	at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication(GuiceFakeApplicationFactory.scala:32)
+	at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication$(GuiceFakeApplicationFactory.scala:32)
+	at com.example.HomeControllerSpec.fakeApplication(HomeControllerSpec.scala:8)
+	at org.scalatestplus.play.BaseOneAppPerTest.newAppForTest(BaseOneAppPerTest.scala:70)
+	at org.scalatestplus.play.BaseOneAppPerTest.newAppForTest$(BaseOneAppPerTest.scala:70)
+	at com.example.HomeControllerSpec.newAppForTest(HomeControllerSpec.scala:8)
+	at org.scalatestplus.play.BaseOneAppPerTest.withFixture(BaseOneAppPerTest.scala:88)
+	at org.scalatestplus.play.BaseOneAppPerTest.withFixture$(BaseOneAppPerTest.scala:87)
+	at com.example.HomeControllerSpec.withFixture(HomeControllerSpec.scala:8)
+	at org.scalatest.wordspec.AnyWordSpecLike.invokeWithFixture$1(AnyWordSpecLike.scala:1238)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$runTest$1(AnyWordSpecLike.scala:1250)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTest(AnyWordSpecLike.scala:1250)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTest$(AnyWordSpecLike.scala:1232)
+	at org.scalatest.wordspec.AnyWordSpec.runTest(AnyWordSpec.scala:1880)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$runTests$1(AnyWordSpecLike.scala:1309)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:413)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:401)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:390)
+	at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:427)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:401)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTests(AnyWordSpecLike.scala:1309)
+	at org.scalatest.wordspec.AnyWordSpecLike.runTests$(AnyWordSpecLike.scala:1308)
+	at org.scalatest.wordspec.AnyWordSpec.runTests(AnyWordSpec.scala:1880)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:1096)
+	at org.scalatest.wordspec.AnyWordSpec.org$scalatest$wordspec$AnyWordSpecLike$$super$run(AnyWordSpec.scala:1880)
+	at org.scalatest.wordspec.AnyWordSpecLike.$anonfun$run$1(AnyWordSpecLike.scala:1354)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.wordspec.AnyWordSpecLike.run(AnyWordSpecLike.scala:1354)
+	at org.scalatest.wordspec.AnyWordSpecLike.run$(AnyWordSpecLike.scala:1352)
+	at org.scalatest.wordspec.AnyWordSpec.run(AnyWordSpec.scala:1880)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:414)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</failure>
+                    </testcase>
+          <system-out><![CDATA[]]></system-out>
+          <system-err><![CDATA[]]></system-err>
+        </testsuite>

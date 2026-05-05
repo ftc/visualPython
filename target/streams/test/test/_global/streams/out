@@ -1,4 +1,8 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(com.example.CalculatorSpec, org.scalatest.tools.Framework$$anon$1@59ee0403, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector()[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for org.scalatest.tools.Framework produced 2 initial tasks for 2 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(com.example.CalculatorSpec, sbt.ForkMain$SubclassFingerscan@20322d26, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mCalculatorSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mCalculator.add[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return the sum of two integers[0m[0m
@@ -9,10 +13,198 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mCalculator.divide[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return Right with the quotient for nonzero divisor[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return Left for division by zero[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 111 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 5[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 5, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 5 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(com.example.HomeControllerSpec, sbt.ForkMain$SubclassFingerscan@192b07fd, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mHomeControllerSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mHomeController GET /[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should return 200 OK *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  com.google.inject.CreationException: Unable to create injector, see the following errors:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1) [Guice/MissingImplementation]: No implementation for Materializer was bound.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mRequested by:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1  : AhcWSClientProvider.<init>(AhcWSModule.scala:221)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter materializer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at AhcWSModule.<init>(AhcWSModule.scala:40):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m2  : StandaloneWSClientProvider.<init>(AhcWSModule.scala:232)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter materializer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at AhcWSModule.<init>(AhcWSModule.scala:39):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m3  : AhcWSModule$AhcWSClientProvider.<init>(AhcWSModule.java:42)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at BindingKey.toProvider(BindingKey.java:155):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m4  : AhcWSModule$StandaloneWSClientProvider.<init>(AhcWSModule.java:58)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at BindingKey.toProvider(BindingKey.java:155):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mLearn more:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1 error[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m======================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mFull classname legend:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m======================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSClientProvider:                    "play.api.libs.ws.ahc.AhcWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule:                            "play.api.libs.ws.ahc.AhcWSModule"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule$AhcWSClientProvider:        "play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule$StandaloneWSClientProvider: "play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBindingKey:                             "play.inject.BindingKey"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mGuiceableModuleConversions$$anon$4:     "play.api.inject.guice.GuiceableModuleConversions$$anon$4"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mMaterializer:                           "org.apache.pekko.stream.Materializer"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mModules$OverrideModule:                 "com.google.inject.util.Modules$OverrideModule"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mStandaloneWSClientProvider:             "play.api.libs.ws.ahc.StandaloneWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mapi.libs.ws.StandaloneWSClient:         "play.api.libs.ws.StandaloneWSClient"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mapi.libs.ws.WSClient:                   "play.api.libs.ws.WSClient"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m========================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mEnd of classname legend:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m========================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:163)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.Guice.createInjector(Guice.java:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.Guice.createInjector(Guice.java:78)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:200)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:176)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication(GuiceFakeApplicationFactory.scala:32)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication$(GuiceFakeApplicationFactory.scala:32)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.example.HomeControllerSpec.fakeApplication(HomeControllerSpec.scala:8)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should return HTML content type *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  com.google.inject.CreationException: Unable to create injector, see the following errors:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1) [Guice/MissingImplementation]: No implementation for Materializer was bound.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mRequested by:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1  : AhcWSClientProvider.<init>(AhcWSModule.scala:221)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter materializer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at AhcWSModule.<init>(AhcWSModule.scala:40):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m2  : StandaloneWSClientProvider.<init>(AhcWSModule.scala:232)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter materializer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at AhcWSModule.<init>(AhcWSModule.scala:39):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m3  : AhcWSModule$AhcWSClientProvider.<init>(AhcWSModule.java:42)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at BindingKey.toProvider(BindingKey.java:155):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m4  : AhcWSModule$StandaloneWSClientProvider.<init>(AhcWSModule.java:58)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at BindingKey.toProvider(BindingKey.java:155):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mLearn more:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1 error[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m======================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mFull classname legend:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m======================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSClientProvider:                    "play.api.libs.ws.ahc.AhcWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule:                            "play.api.libs.ws.ahc.AhcWSModule"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule$AhcWSClientProvider:        "play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule$StandaloneWSClientProvider: "play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBindingKey:                             "play.inject.BindingKey"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mGuiceableModuleConversions$$anon$4:     "play.api.inject.guice.GuiceableModuleConversions$$anon$4"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mMaterializer:                           "org.apache.pekko.stream.Materializer"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mModules$OverrideModule:                 "com.google.inject.util.Modules$OverrideModule"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mStandaloneWSClientProvider:             "play.api.libs.ws.ahc.StandaloneWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mapi.libs.ws.StandaloneWSClient:         "play.api.libs.ws.StandaloneWSClient"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mapi.libs.ws.WSClient:                   "play.api.libs.ws.WSClient"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m========================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mEnd of classname legend:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m========================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:163)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.Guice.createInjector(Guice.java:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.Guice.createInjector(Guice.java:78)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:200)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:176)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication(GuiceFakeApplicationFactory.scala:32)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication$(GuiceFakeApplicationFactory.scala:32)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.example.HomeControllerSpec.fakeApplication(HomeControllerSpec.scala:8)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should contain the app name in the body *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  com.google.inject.CreationException: Unable to create injector, see the following errors:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1) [Guice/MissingImplementation]: No implementation for Materializer was bound.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mRequested by:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1  : AhcWSClientProvider.<init>(AhcWSModule.scala:221)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter materializer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at AhcWSModule.<init>(AhcWSModule.scala:40):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface api.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m2  : StandaloneWSClientProvider.<init>(AhcWSModule.scala:232)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter materializer[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at AhcWSModule.<init>(AhcWSModule.scala:39):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface api.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class StandaloneWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m3  : AhcWSModule$AhcWSClientProvider.<init>(AhcWSModule.java:42)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at BindingKey.toProvider(BindingKey.java:155):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface play.libs.ws.WSClient to ProviderConstructionTarget(class AhcWSModule$AhcWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m4  : AhcWSModule$StandaloneWSClientProvider.<init>(AhcWSModule.java:58)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ for 2nd parameter[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m     at BindingKey.toProvider(BindingKey.java:155):[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBinding(interface play.libs.ws.StandaloneWSClient to ProviderConstructionTarget(class AhcWSModule$StandaloneWSClientProvider))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m      \_ installed by: Modules$OverrideModule -> GuiceableModuleConversions$$anon$4[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mLearn more:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  https://github.com/google/guice/wiki/MISSING_IMPLEMENTATION[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m1 error[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m======================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mFull classname legend:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m======================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSClientProvider:                    "play.api.libs.ws.ahc.AhcWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule:                            "play.api.libs.ws.ahc.AhcWSModule"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule$AhcWSClientProvider:        "play.libs.ws.ahc.AhcWSModule$AhcWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mAhcWSModule$StandaloneWSClientProvider: "play.libs.ws.ahc.AhcWSModule$StandaloneWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mBindingKey:                             "play.inject.BindingKey"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mGuiceableModuleConversions$$anon$4:     "play.api.inject.guice.GuiceableModuleConversions$$anon$4"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mMaterializer:                           "org.apache.pekko.stream.Materializer"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mModules$OverrideModule:                 "com.google.inject.util.Modules$OverrideModule"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mStandaloneWSClientProvider:             "play.api.libs.ws.ahc.StandaloneWSClientProvider"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mapi.libs.ws.StandaloneWSClient:         "play.api.libs.ws.StandaloneWSClient"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mapi.libs.ws.WSClient:                   "play.api.libs.ws.WSClient"[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m========================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mEnd of classname legend:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m========================[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:589)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.InternalInjectorCreator.initializeStatically(InternalInjectorCreator.java:163)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.internal.InternalInjectorCreator.build(InternalInjectorCreator.java:110)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.Guice.createInjector(Guice.java:87)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.google.inject.Guice.createInjector(Guice.java:78)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at play.api.inject.guice.GuiceBuilder.injector(GuiceInjectorBuilder.scala:200)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at play.api.inject.guice.GuiceApplicationBuilder.build(GuiceApplicationBuilder.scala:176)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication(GuiceFakeApplicationFactory.scala:32)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatestplus.play.guice.GuiceFakeApplicationFactory.fakeApplication$(GuiceFakeApplicationFactory.scala:32)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at com.example.HomeControllerSpec.fakeApplication(HomeControllerSpec.scala:8)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 3 events.[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 705 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 8[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 5, failed 3, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 3 TESTS FAILED ***[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com.example.CalculatorSpec[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	com.example.HomeControllerSpec[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
