@@ -1,5 +1,7 @@
 A project to visually execute python scripts.
-Warning: this project was vibe coded in under an hour.  Run at your own risk.
+Warning: this project was vibe coded in under an hour.  Don't have any expectation of security as it runs the python debugger locally (code injection attacks are very easy).
+
+All queries used to make this project are in the file all_prompts.md.
 
 
 Endpoints:
